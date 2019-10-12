@@ -7,5 +7,15 @@
   一个携带request字段的对象交给事先填充过操作对象的容器，然后容器调用对应操作对象的对应方法，返回对应的返回值。</br>
 这一过程中，操作者并没有请求者的引用，也没有返回值的引用</br></br>
 实用之处:</br>前端后台数据交互，解决请求参数和返回数据  之间接口复杂的问题，，实现了想请求什么数据就会获得什么数据的灵活性，并且面向对象，解析简单</br>
+</br></br>
+test</br>
 
-
+          Context context=Context.getContext();
+		context.addTranDataMap(TestCome.class,TestBack.class);
+		context.addActor(TestActor.class);
+		context.showWorks();
+		TestCome comeData=new TestCome();
+		comeData.setType("test");
+		comeData.setAction("test");
+		TestBack backData=context.back(comeData);
+		System.out.println(backData.getData());
