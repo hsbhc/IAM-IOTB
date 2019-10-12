@@ -1,4 +1,4 @@
-package individual.context;
+package individual.bean;
 
 public class CTA {
 	

@@ -6,11 +6,10 @@ import individual.anno.Come;
 
 @Actor(name = "user")
 public class TestActor {
-	
 	@Come
 	TestCome come;
+	
 	TestBack testBack;
-	String s;
 	@Action(name = "test")
 	TestBack getBack() {
 		testBack.setData("Hello World!");

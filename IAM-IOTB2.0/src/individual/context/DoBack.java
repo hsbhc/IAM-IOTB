@@ -9,6 +9,7 @@ import individual.analysis.ComeAnalysis;
 import individual.anno.Action;
 import individual.anno.Come;
 import individual.bean.ActorMap;
+import individual.bean.CTA;
 
 public class DoBack implements DoBackHandle{
 	

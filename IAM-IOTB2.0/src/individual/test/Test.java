@@ -8,15 +8,10 @@ public class Test {
 
 	public static void main(String[] args) {
 		Context context=Context.getContext();
-		
 		context.addActor(TestActor.class);
-		
 		context.showWorks();
 		
-		
-		
 		TestCome comeData=new TestCome();
-		
 		comeData.setRequest("user.test");
 		TestBack backData=context.back(comeData);
 		System.out.println(backData.getData());

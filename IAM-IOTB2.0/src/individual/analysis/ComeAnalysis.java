@@ -2,8 +2,8 @@ package individual.analysis;
 
 
 import java.lang.reflect.Field;
-import individual.context.CTA;
 
+import individual.bean.CTA;
 
 public class ComeAnalysis{
 	private static ComeAnalysis analysis=new ComeAnalysis();

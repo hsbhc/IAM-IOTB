@@ -3,6 +3,9 @@ package individual.test;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+public class TestServlet{
+	String teString="testservlet";
+}
 /*
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
