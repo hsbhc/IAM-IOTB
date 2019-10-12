@@ -26,7 +26,24 @@ Test 相见test</br>
 </br>
 <h1>IAM-IOTB 2.0</h1>
 <p>
-	2.0 改变指令的形式为request</br>取消了Come对象中构造方法的限制</br取消Come和Back成对的限制</br取消添加对象class的繁琐,
-	只提供添加actor</br增强actor中方法的作用，使返回值可以为任意类型
+	2 改变指令的形式为request</br>
+	取消了Come对象中构造方法的限制</br>
+	取消Come和Back成对的限制</br>
+	取消添加对象class的繁琐,只提供添加actor</br>
+	增强actor中方法的作用，使返回值可以为任意类型
 	
 </p>
+Test 相见test</br>
+
+		Context context=Context.getContext();
+		context.addActor(TestActor.class);
+		context.showWorks();
+		
+		TestCome comeData=new TestCome();
+		comeData.setRequest("user.test");
+		TestBack backData=context.back(comeData);
+		System.out.println(backData.getData());
+		
+		comeData.setRequest("user.test1");
+		String string=context.back(comeData);
+		System.out.println(string);
