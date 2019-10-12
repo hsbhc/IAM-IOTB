@@ -8,62 +8,10 @@
 这一过程中，操作者并没有请求者的引用，也没有返回值的引用</br></br>
 实用之处:</br>前端后台数据交互，解决请求参数和返回数据  之间接口复杂的问题，，实现了想请求什么数据就会获得什么数据的灵活性，并且面向对象，解析简单
 </br></br>
-
-
-	@Come
-	public class TestCome {
-		private String type;
-		private String action;
-		public String getType() {
-			return type;
-		}
-		public void setType(String type) {
-			this.type = type;
-		}
-		public String getAction() {
-			return action;
-		}
-		public void setAction(String action) {
-			this.action = action;
-		}
-	}
-</br></br>
-
-	@Back
-	public class TestBack {
-		private String data;
 	
-		public String getData() {
-			return data;
-		}
+Test 相见test</br>
 
-		public void setData(String data) {
-			this.data = data;
-		}
-	}
-
-</br></br>
-
-	@Actor(name = "test")
-	public class TestActor {
-		private TestCome come;
-		public TestActor(TestCome come) {
-			this.come=come;
-		}
-	
-		@Action(name = "test")
-		private TestBack getBack() {
-			TestBack testBack=new TestBack();
-			testBack.setData("Hello World!");
-			System.out.println(testBack.getData());
-			return testBack;
-		}
-	}
-	
-</br></br>
-test</br>
-
-          Context context=Context.getContext();
+         	Context context=Context.getContext();
 		context.addTranDataMap(TestCome.class,TestBack.class);
 		context.addActor(TestActor.class);
 		context.showWorks();
