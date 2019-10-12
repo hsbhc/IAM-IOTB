@@ -25,3 +25,8 @@ Test 相见test</br>
 		
 </br>
 <h1>IAM-IOTB 2.0</h1>
+<p>
+	2.0 改变指令的形式为request</br>取消了Come对象中构造方法的限制</br取消Come和Back成对的限制</br取消添加对象class的繁琐,
+	只提供添加actor</br增强actor中方法的作用，使返回值可以为任意类型
+	
+</p>
