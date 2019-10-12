@@ -28,12 +28,29 @@ Test 相见test</br>
 <p>
 	2 改变指令的形式为request</br>
 	取消了Come对象中构造方法的限制</br>
-	取消Come和Back成对的限制</br>
+	取消Come和Back成对的限制以及需要添加注释的繁琐</br>
 	取消添加对象class的繁琐,只提供添加actor</br>
-	增强actor中方法的作用，使返回值可以为任意类型
+	增强actor中方法的作用，使返回值可以为任意类型</br>
+	actor中属于返回值的对象不需要初始化，但至少要有一个注解为@Come的come对象，也不需要初始化
 	
 </p>
 Test 相见test</br>
+
+		@Actor(name = "user")
+		public class TestActor {
+			@Come
+			TestCome come;
+			TestBack testBack;
+			@Action(name = "test")
+			TestBack getBack() {
+				testBack.setData("Hello World!");
+				return testBack;
+			}
+		@Action(name = "test1")
+		String get() {
+			return "哈哈哈";
+		}
+	}
 
 		Context context=Context.getContext();
 		context.addActor(TestActor.class);
