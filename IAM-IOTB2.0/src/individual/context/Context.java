@@ -22,6 +22,8 @@ public class  Context implements DoMapping{
 	private ActorAnalysis analysis=ActorAnalysis.getAnalysis();
 	private DoBackHandle doBackHandle=new DoBack();
 	
+	
+	
 	private Map<String, ActorMap> actors=new HashMap<String, ActorMap>();
 	
 	
@@ -49,13 +51,13 @@ public class  Context implements DoMapping{
 		
 		if(actorMap==null) {
 			System.out.println(cls.getSimpleName()+" add is fail");
-			return null;
+			return this;
 		}
 		
 		String actorName=actorMap.getActorName();
 		if(actors.containsKey(actorName)) {
 			System.out.println(actorName+"  is repeated");
-			return null;
+			return this;
 		}else {
 			actors.put(actorName,actorMap);
 		}
